@@ -2,6 +2,8 @@
 #include<vector>
 #include<string>
 #include<iterator>//библиотека для итераторов
+
+
 class MyClass {
 private:
 	int _data;
@@ -89,9 +91,6 @@ private:
 	int _age;
 };
 
-
-
-
 int main(){
 	/*
 	setlocale(LC_ALL, "rus");
@@ -116,7 +115,6 @@ int main(){
 	St2->getName();
 	delete St2;
 	*/
-
 	std::vector <int> arr{ 17878,22,33,1,22,111 };
 	/*arr.push_back(7);// 7 в конец
 	std::cout<<arr.size()<<std::endl;
@@ -137,19 +135,16 @@ int main(){
 	{
 		std::cout << *it << ' ';
 	}
-	
-	Person p1(" J ", 21);
-	Person p2(" J1 ", 221);
-	Person p3(" J11 ", 211);
-	std::vector<Person>pipl;
-	std::vector<Person>::iterator it1;
+	Person *p1 = new Person (" J1 ", 21);
+	Person *p2 = new Person (" J2 ", 211);
+	Person *p3 = new Person (" J3 ", 2111);
+	std::vector<Person*>pipl;
+	std::vector<Person*>::iterator it1;
 	pipl.push_back(p1);
 	pipl.push_back(p2);
 	pipl.push_back(p3);
 	it1 = pipl.begin();
-	
-	
-	(*(it1+1)).show();
+	(**it1).show();
 	
 
 		
